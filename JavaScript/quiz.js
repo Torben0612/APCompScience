@@ -18,8 +18,9 @@ var answerBox
 
 function setup() {
   createCanvas(400, 400);
-  answerBox = createInput("put your answe here");
-  answeBox.position()
+  answerBox = createInput();
+
+  answerBox.position(100, 200)
 }
 
 function draw() {
@@ -28,9 +29,9 @@ function draw() {
   textAlign(CENTER)
   text("Welcome to a Astronomy quiz", 200, 70)
   text(result, 200, 300)
-  text("Question #" + currentQuestionNumber + 1, 200, 100)
+  text("Question #" + currentQuestionNumber + 1, 200, 120)
   textSize(15)
-  text(questions[currentQuestionNumber], 200, 200)
+  text(questions[currentQuestionNumber], 200, 160)
 }
 
 function keypressed(){
