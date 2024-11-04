@@ -36,6 +36,9 @@ function draw() {
 
 function keypressed(){
   if (key == ENTER){
-    
+    if ((answebox.Value) == answers[currentQuestionNumber]){
+      points =+ 1
+      result = "Correct you gained 1 point"
+    } else 
   }
 }
