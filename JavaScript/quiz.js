@@ -1,14 +1,14 @@
 var points = 0
 var questions = [
   "which jupiter moon was detected to \nhave liquid water under the icy surface",
-  "Question2",
-  "question3",
+  "What is the tallest mountian in th solar system",
+  "The name of the biggest asteroid in our solar system is",
   "question4",
   "Question5"]
 var answers = 
-    ["Europa",
-     "answer2",
-     "answer3",
+    ["europa",
+     "olympus mons",
+     "ceres",
      "answer4",
      "answer5"]
 var result = ""
@@ -38,7 +38,7 @@ function draw() {
   text("Question #" + currentQuestionNumber, 200, 100)
   textSize(15)
   text(questions[currentIndex], 200, 120)
-  rect()
+  text("Score " + points, 200,)
 }
 
 function keyPressed(){
@@ -48,7 +48,7 @@ function keyPressed(){
       result = "Correct you gained 1 point"
       
     } else {
-      result = "Incorrect the correct answer was " + answers[currentIndex + 1]
+      result = "Incorrect the correct answer was " + answers[currentIndex]
       currentQuestionNumber += 1
       currentIndex += 1
     }
