@@ -31,26 +31,29 @@ function draw() {
   textSize(20)
   textAlign(CENTER)
   rect(50,50,300,100)
-  text("Welcome to the Space Flight quiz", 200, 70)
+  text("Welcome to the astronomy quiz", 200, 70)
   textSize(15)
   text(result, 200, 300)
   textSize(20)
   text("Question #" + currentQuestionNumber, 200, 100)
   textSize(15)
   text(questions[currentIndex], 200, 120)
-  text("Score " + points, 200,)
+  rect(170, 265, 60, 20)
+  text("Score " + points, 200, 280,)
+  
 }
 
 function keyPressed(){
   if (keyCode === ENTER){
-    if ((answerBox.Value) == answers[currentIndex]){
-      points =+ 1
+    if(answerBox.value() === answers[currentIndex]){
+      points += 1
       result = "Correct you gained 1 point"
-      
-    } else {
+      currentIndex += 1
+      currentQuestionNumber += 1
+    } else{
       result = "Incorrect the correct answer was " + answers[currentIndex]
       currentQuestionNumber += 1
       currentIndex += 1
-    }
+}
   }
 }
