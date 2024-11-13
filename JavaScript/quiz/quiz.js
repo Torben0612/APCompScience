@@ -1,16 +1,16 @@
 var points = 0
 var questions = [
   "which jupiter moon was detected to \nhave liquid water under the icy surface",
-  "What is the tallest mountian in th solar system",
-  "The name of the biggest asteroid in our solar system is",
-  "question4",
-  "Question5"]
+  "What is the tallest mountian \nin the solar system",
+  "The name of the biggest \nasteroid in our solar system is",
+  "About how many light years \nacross is the Milky Way?",
+  "Which planet has a moon almost \nas big as the planet itself? "]
 var answers = 
     ["europa",
      "olympus mons",
      "ceres",
-     "answer4",
-     "answer5"]
+     "100000",
+     "pluto"]
 var result = ""
 var currentQuestionNumber = 1
 var currentIndex = 0
