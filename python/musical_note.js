@@ -38,5 +38,5 @@ function decrypt(byte) {
 console.log(decrypt("00000000"));
 
 function encrypt(note){
-    var parts = note.split("")
+    var parts = note.split(" ")
 }
