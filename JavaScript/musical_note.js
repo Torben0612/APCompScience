@@ -35,8 +35,52 @@ function decrypt(byte) {
         else if (code === "11"){ return "4" }
         else { return "please upgrade to premium version" }
     }
-console.log(decrypt("00000000"));
+
 
 function encrypt(note){
     var parts = note.split(" ")
+    var pitch = parts[0]
+    var duration = parts[1]
+    var octave = parts[2]
+
+    return "0" + encryptPitch(pitch) + encryptDuration(duration) + encryptOctave(octave)
 }
+
+function encryptPitch(pitch){
+    if (pitch === "A") { return "0000" }
+    else if (pitch === "A#") { return "0001" }
+    else if (pitch === "B") { return "0010" }
+    else if (pitch === "C") { return "0011" }
+    else if (pitch === "C#") { return "0100" }
+    else if (pitch === "D") { return "0101" }
+    else if (pitch === "D#") { return "0110" }
+    else if (pitch === "E") { return "0111" }
+    else if (pitch === "F") { return "1000" }
+    else if (pitch === "F#") { return "1001" }
+    else if (pitch === "G") { return "1010" }
+    else if (pitch === "G#") { return "1011"}
+    else { return "please upgrade to premium version" }
+
+}
+
+function encryptDuration(duration){
+    if (duration === "1/1"){ return "00"}
+    else if (duration === "1/2"){ return "01" }
+    else if (duration === "1/4"){ return "10"}
+    else if (duration === "1/8"){ return "11"}
+    else{ return "please upgrade to premium version" }
+}
+function encryptOctave(octave){
+    if (octave === "1") { return "00" }
+    else if (octave === "2"){ return "01" }
+    else if (octave === "3"){ return "10" }
+    else if (octave === "4"){ return "11" }
+    else { return "please upgrade to premium version" }
+}
+
+
+console.log(encrypt("G# 1/8 1"));
+console.log(decrypt("010111001"));
+
+console.log(encrypt("A 1/2 3"));0
+console.log(decrypt("000000110"));
