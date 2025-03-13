@@ -86,4 +86,3 @@ function encryptOctave(octave){
 
 notes.forEach(encrypt)
 encryptedByte.forEach(decrypt)
-console.log(encryptedByte)
