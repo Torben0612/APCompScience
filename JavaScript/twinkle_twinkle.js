@@ -48,7 +48,7 @@ function encrypt(note){
     encryptedByte.push("0" + encryptPitch(pitch) + encryptDuration(duration) + encryptOctave(octave))
     console.log("0" + encryptPitch(pitch) + encryptDuration(duration) + encryptOctave(octave))
 
-
+c;a
 }
 
 function encryptPitch(pitch){
